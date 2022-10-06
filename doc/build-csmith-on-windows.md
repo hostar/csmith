@@ -10,10 +10,11 @@ We need Visual studio, cmake, and m4 to build Csmith on Windows with Visual Stud
 [here](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community)
 * **cmake:** Download cmake binary for Windows
 [here](https://cmake.org/download/)
-* **m4:** Download m4 for Windows
+* ~~**m4:** Download m4 for Windows
 [here](http://gnuwin32.sourceforge.net/packages/m4.htm).
 We need the zip files from both "Binaries" and "Dependencies",
-and extract `m4.exe` and `regex2.dll` to C:\windows\system32.
+and extract `m4.exe` and `regex2.dll` to C:\windows\system32.~~
+m4 is already part of this fork
 
 ### Build
 
@@ -26,7 +27,7 @@ with Visual Studio.
 should indicate the target is Visual Studio.
     ```
     cd c:\csmith
-    cmake -DCMAKE_INSTALL_PREFIX=<install-prefix> .
+    cmake .
     ```
 * Build the solution with Visual Studio by opening the generated `csmith.sln`
 and hit `build solution`.
