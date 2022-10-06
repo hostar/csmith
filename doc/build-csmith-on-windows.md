@@ -8,13 +8,12 @@ We need Visual studio, cmake, and m4 to build Csmith on Windows with Visual Stud
 
 * **Visual Studio:** Download Visual Studio community edition
 [here](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community)
-* **cmake:** Download cmake binary for Windows
-[here](https://cmake.org/download/)
-* ~~**m4:** Download m4 for Windows
+* cmake is now part of Visual Studio ~~**cmake:** Download cmake binary for Windows
+[here](https://cmake.org/download/)~~
+* m4 is already part of this fork ~~**m4:** Download m4 for Windows
 [here](http://gnuwin32.sourceforge.net/packages/m4.htm).
 We need the zip files from both "Binaries" and "Dependencies",
 and extract `m4.exe` and `regex2.dll` to C:\windows\system32.~~
-m4 is already part of this fork
 
 ### Build
 
@@ -23,21 +22,21 @@ Suppose you have cloned the csmith project from
 to run cmake to generate Visual Studio solution/projects files, and build them
 with Visual Studio.
 
-* generate solution/project files with `cmake`. The first output from `cmake`
+* Open Visual Studio and click `Tools -> Command Line -> Developer Command Prompt`  
+This will open command line.
+
+* Following commands will generate solution/project files with `cmake`. The first output from `cmake`
 should indicate the target is Visual Studio.
     ```
     cd c:\csmith
     cmake .
     ```
 * Build the solution with Visual Studio by opening the generated `csmith.sln`
-and hit `build solution`.
+and hit `Build -> Build Solution`.
 
-### Install
+### Binary
 
-You can Install the build outputs with Visual Studio
-by building the `INSTALL` project. The necessary bits for
-deployment is gathered under the folder designated by
-`<install-prefix>`.
+EXE binary will be in `src\Debug\` folder.
 
 ## With WSL
 
